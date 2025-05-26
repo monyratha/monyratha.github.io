@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mony Ratha - Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            mono: ['Fira Code', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      transition: background 0.3s, color 0.3s;
+    }
+  </style>
+</head>
+<body class="bg-gray-900 text-white font-mono">
+  <div class="max-w-4xl mx-auto p-6">
+    <header class="flex justify-between items-center mb-10">
+      <h1 class="text-3xl font-bold">Mony Ratha</h1>
+      <button onclick="document.documentElement.classList.toggle('dark')" class="text-sm border px-3 py-1 rounded hover:bg-gray-800">Toggle Theme</button>
+    </header>
+
+    <section class="mb-8">
+      <h2 class="text-xl font-semibold mb-2">About Me</h2>
+      <p>
+        Hi, I'm Mony Ratha – a backend developer with over 6 years of experience building web applications for the public and private sectors.
+        I specialize in Spring Boot, Laravel, and building powerful backend systems. I enjoy researching new technologies and delivering reliable software that scales.
+      </p>
+    </section>
+
+    <section class="mb-8">
+      <h2 class="text-xl font-semibold mb-2">Skills</h2>
+      <ul class="list-disc list-inside space-y-1">
+        <li><strong>Languages:</strong> Java, PHP, JavaScript, Python</li>
+        <li><strong>Frameworks:</strong> Spring Boot, Laravel, CodeIgniter, Django, Odoo</li>
+        <li><strong>Frontend:</strong> HTML, CSS, Bootstrap, jQuery, AngularJS</li>
+        <li><strong>Databases:</strong> MySQL, PostgreSQL, SQL Server, Redis</li>
+        <li><strong>Tools:</strong> Git, GitHub, IntelliJ, VS Code, Docker</li>
+      </ul>
+    </section>
+
+    <section class="mb-8">
+      <h2 class="text-xl font-semibold mb-2">Projects</h2>
+      <ul class="list-disc list-inside space-y-1">
+        <li><strong>Loan Management System:</strong> Built using Nova and MySQL; used by financial institutions.</li>
+        <li><strong>POS System:</strong> Laravel-based POS app for small businesses.</li>
+        <li><strong>Family Movie Streaming Platform:</strong> Custom-built entertainment platform.</li>
+        <li><strong>Admin Dashboard:</strong> Spring Boot + Vue.js for user and analytics management.</li>
+      </ul>
+    </section>
+
+    <section class="mb-8">
+      <h2 class="text-xl font-semibold mb-2">Work Experience</h2>
+      <ul class="space-y-3">
+        <li>
+          <strong>Programmer – Maya Technology (2023–Present):</strong> Spring Boot backend, QA.
+        </li>
+        <li>
+          <strong>Programmer – Ministry of Economy and Finance (2018–2023):</strong> Application development.
+        </li>
+        <li>
+          <strong>Web Developer – One Technology Team (2017–2018):</strong> POS, loan, attendance systems.
+        </li>
+      </ul>
+    </section>
+
+    <section class="mb-8">
+      <h2 class="text-xl font-semibold mb-2">Education</h2>
+      <ul class="list-disc list-inside">
+        <li>BSc in Information and Network Technology – Build Bright University</li>
+        <li>English – COERR Language Skills Center</li>
+      </ul>
+    </section>
+
+    <section class="mb-8">
+      <h2 class="text-xl font-semibold mb-2">Contact Me</h2>
+      <form class="space-y-4">
+        <input type="text" placeholder="Your Name" class="w-full p-2 bg-gray-800 border border-gray-600 rounded" required />
+        <input type="email" placeholder="Your Email" class="w-full p-2 bg-gray-800 border border-gray-600 rounded" required />
+        <textarea placeholder="Your Message" class="w-full p-2 bg-gray-800 border border-gray-600 rounded h-32" required></textarea>
+        <button type="submit" class="bg-teal-500 px-4 py-2 rounded hover:bg-teal-600 transition">Send</button>
+      </form>
+    </section>
+
+    <footer class="text-center text-sm text-gray-500 mt-10">© 2025 Mony Ratha</footer>
+  </div>
+</body>
+</html>
