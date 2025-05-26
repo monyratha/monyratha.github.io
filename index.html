@@ -17,7 +17,6 @@
             }
         };
 
-        // Apply theme from localStorage on page load
         window.addEventListener('DOMContentLoaded', () => {
             if (localStorage.theme === 'dark') {
                 document.documentElement.classList.add('dark');
@@ -26,7 +25,6 @@
             }
         });
 
-        // Toggle handler
         function toggleTheme() {
             const html = document.documentElement;
             html.classList.toggle('dark');
@@ -48,24 +46,22 @@
         <button onclick="toggleTheme()" class="text-sm border px-3 py-1 rounded hover:bg-gray-800">
             Toggle Theme
         </button>
-
     </header>
 
     <section class="mb-8">
         <h2 class="text-xl font-semibold mb-2">About Me</h2>
         <p>
             I'm Mony Ratha, a developer with 9+ years of experience in full-stack and backend development. From 2016 to
-            2023, I built end-to-end systems using Laravel, Django, Odoo, and more. Since 2023, my focus has shifted to
-            backend API development using Java Spring Boot, where I specialize in designing scalable and maintainable
-            services.
+            2023, I built end-to-end systems using Laravel, Django, Odoo, and more. Since 2023, I've specialized in
+            backend API development with Java Spring Boot, creating scalable and maintainable services.
             <br><br>
-            I'm experienced in optimizing data-heavy workflows with MySQL and Redis, and enjoy solving real-world
-            problems with clean and efficient code. Starting my journey with PHP, I've created a wide range of
-            systems—from Loan & Installment platforms to streaming solutions.
+            I’m skilled at optimizing data-heavy workflows with MySQL and Redis and love solving real-world problems
+            with clean, efficient code. Starting with PHP, I’ve developed systems ranging from loan & installment
+            platforms to custom streaming solutions.
             <br><br>
-            Recently, I’ve started exploring AI/ML technologies like PyTorch, Transformers, and Hugging Face. While I'm
-            still learning, I’ve begun building small demos and experimenting with how AI can enhance backend systems.
-            I’m passionate about automation, analytics, and continuous learning.
+            Lately, I’ve started exploring AI/ML tools like PyTorch, Transformers, and Hugging Face. I'm still learning,
+            but already experimenting with how AI can enhance backend systems. I'm passionate about automation,
+            analytics, and continuous growth.
         </p>
     </section>
 
@@ -84,35 +80,29 @@
     <section class="mb-8">
         <h2 class="text-xl font-semibold mb-2">Projects</h2>
         <ul class="list-disc list-inside space-y-1">
-            <li><strong>Loan & Installment Management System:</strong> Built with Nova and MySQL, used by financial
-                institutions for managing customer loans.
+            <li><strong>Loan & Installment Management System:</strong> Nova + MySQL platform for managing customer
+                loans.
             </li>
-            <li><strong>POS System:</strong> Retail-ready solution powered by Laravel with live sales and reporting
-                features.
+            <li><strong>POS System:</strong> Laravel-based retail solution with live sales and reporting.</li>
+            <li><strong>Private Movie System:</strong> Media management system for a café-style movie room.</li>
+            <li><strong>Enterprise Tools at MEF:</strong> Laravel/Django/Odoo apps for internal government workflows.
             </li>
-            <li><strong>Private Movie System:</strong> Built for a cafe-shop movie room, handling media playback.</li>
-            <li><strong>Enterprise Tools at MEF:</strong> Internal systems using Laravel, Django, Odoo, MySQL, and
-                PostgreSQL.
-            </li>
-            <li><strong>Admin & App APIs:</strong> RESTful APIs powering web dashboards and mobile apps.</li>
-            <li><strong>Analytics Dashboards:</strong> Real-time data visualization and tracking using Metabase.</li>
+            <li><strong>Admin & App APIs:</strong> RESTful APIs supporting web dashboards and mobile platforms.</li>
+            <li><strong>Analytics Dashboards:</strong> Real-time insights using Metabase.</li>
         </ul>
     </section>
 
     <section class="mb-8">
         <h2 class="text-xl font-semibold mb-2">Work Experience</h2>
         <ul class="space-y-3">
-            <li>
-                <strong>Programmer – Maya Technology (2023–Present):</strong> Focused on building scalable backend APIs
-                using Spring Boot.
+            <li><strong>Programmer – Maya Technology (2023–Present):</strong> Building scalable backend APIs with Spring
+                Boot.
             </li>
-            <li>
-                <strong>Programmer – Ministry of Economy and Finance (2018–2023):</strong> Developed and maintained
-                full-stack enterprise systems.
+            <li><strong>Programmer – Ministry of Economy and Finance (2018–2023):</strong> Developed and maintained
+                full-stack systems for internal use.
             </li>
-            <li>
-                <strong>Web Developer – One Technology Team (2016–2018):</strong> Delivered loan & Installment, POS, and
-                attendance solutions using full-stack technologies.
+            <li><strong>Web Developer – One Technology Team (2016–2018):</strong> Built loan, POS, and attendance apps
+                as a full-stack developer.
             </li>
         </ul>
     </section>
@@ -120,7 +110,8 @@
     <section class="mb-8">
         <h2 class="text-xl font-semibold mb-2">Education</h2>
         <ul class="list-disc list-inside">
-            <li>Bachelor of Science in Information and Network Technology<br><span class="text-sm text-gray-400">2012–2016, Build Bright University, Battambang</span></li>
+            <li><strong>Bachelor of Science in Information and Network Technology</strong><br><span
+                    class="text-sm text-gray-400">2012–2016, Build Bright University – Battambang</span></li>
         </ul>
     </section>
 
