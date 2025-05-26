@@ -1,121 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mony Ratha - Portfolio</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-<script>
-  tailwind.config = {
-    darkMode: 'class',
-    theme: {
-      extend: {
-        fontFamily: {
-          mono: ['Fira Code', 'monospace']
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Mony Ratha - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        mono: ['Fira Code', 'monospace']
+                    }
+                }
+            }
+        };
+
+        // Apply theme from localStorage on page load
+        window.addEventListener('DOMContentLoaded', () => {
+            if (localStorage.theme === 'dark') {
+                document.documentElement.classList.add('dark');
+            } else {
+                document.documentElement.classList.remove('dark');
+            }
+        });
+
+        // Toggle handler
+        function toggleTheme() {
+            const html = document.documentElement;
+            html.classList.toggle('dark');
+            localStorage.theme = html.classList.contains('dark') ? 'dark' : 'light';
         }
-      }
-    }
-  };
+    </script>
 
-  // Apply theme from localStorage on page load
-  window.addEventListener('DOMContentLoaded', () => {
-    if (localStorage.theme === 'dark') {
-      document.documentElement.classList.add('dark');
-    } else {
-      document.documentElement.classList.remove('dark');
-    }
-  });
-
-  // Toggle handler
-  function toggleTheme() {
-    const html = document.documentElement;
-    html.classList.toggle('dark');
-    localStorage.theme = html.classList.contains('dark') ? 'dark' : 'light';
-  }
-</script>
-
-  <style>
-    body {
-      transition: background 0.3s, color 0.3s;
-    }
-  </style>
+    <style>
+        body {
+            transition: background 0.3s, color 0.3s;
+        }
+    </style>
 </head>
 
 <body class="bg-white dark:bg-gray-900 text-black dark:text-white font-mono">
-  <div class="max-w-4xl mx-auto p-6">
+<div class="max-w-4xl mx-auto p-6">
     <header class="flex justify-between items-center mb-10">
-      <h1 class="text-3xl font-bold">Mony Ratha</h1>
-<button onclick="toggleTheme()" class="text-sm border px-3 py-1 rounded hover:bg-gray-800">
-  Toggle Theme
-</button>
+        <h1 class="text-3xl font-bold">Mony Ratha</h1>
+        <button onclick="toggleTheme()" class="text-sm border px-3 py-1 rounded hover:bg-gray-800">
+            Toggle Theme
+        </button>
 
     </header>
 
     <section class="mb-8">
-      <h2 class="text-xl font-semibold mb-2">About Me</h2>
-      <p>
-        I'm Mony Ratha, a developer with 9+ years of experience in full-stack and backend development. From 2016 to 2023, I built end-to-end systems using Laravel, Django, Odoo, and more. Since 2023, my focus has shifted to backend API development using Java Spring Boot, where I specialize in designing scalable and maintainable services.
-        <br><br>
-        I'm experienced in optimizing data-heavy workflows with MySQL and Redis, and enjoy solving real-world problems with clean and efficient code. Starting my journey with PHP, I've created a wide range of systems—from Loan & Installment platforms to streaming solutions.
-        <br><br>
-        Recently, I’ve started exploring AI/ML technologies like PyTorch, Transformers, and Hugging Face. While I'm still learning, I’ve begun building small demos and experimenting with how AI can enhance backend systems. I’m passionate about automation, analytics, and continuous learning.
-      </p>
+        <h2 class="text-xl font-semibold mb-2">About Me</h2>
+        <p>
+            I'm Mony Ratha, a developer with 9+ years of experience in full-stack and backend development. From 2016 to
+            2023, I built end-to-end systems using Laravel, Django, Odoo, and more. Since 2023, my focus has shifted to
+            backend API development using Java Spring Boot, where I specialize in designing scalable and maintainable
+            services.
+            <br><br>
+            I'm experienced in optimizing data-heavy workflows with MySQL and Redis, and enjoy solving real-world
+            problems with clean and efficient code. Starting my journey with PHP, I've created a wide range of
+            systems—from Loan & Installment platforms to streaming solutions.
+            <br><br>
+            Recently, I’ve started exploring AI/ML technologies like PyTorch, Transformers, and Hugging Face. While I'm
+            still learning, I’ve begun building small demos and experimenting with how AI can enhance backend systems.
+            I’m passionate about automation, analytics, and continuous learning.
+        </p>
     </section>
 
     <section class="mb-8">
-      <h2 class="text-xl font-semibold mb-2">Skills</h2>
-      <ul class="list-disc list-inside space-y-1">
-        <li><strong>Languages:</strong> PHP (7+ yrs), Java (2+ yrs), Python</li>
-        <li><strong>Frameworks:</strong> Nova, Laravel, Django, Spring Boot, Odoo, Typecho, CodeIgniter, WordPress</li>
-        <li><strong>Databases:</strong> MySQL, PostgreSQL, SQL Server, Redis</li>
-        <li><strong>Tools:</strong> FFmpeg, MyBatis, GitHub, GitLab, Metabase</li>
-        <li><strong>AI/ML & Analytics:</strong> (Learning) PyTorch, Transformers, Scikit-learn, Hugging Face</li>
-      </ul>
+        <h2 class="text-xl font-semibold mb-2">Skills</h2>
+        <ul class="list-disc list-inside space-y-1">
+            <li><strong>Languages:</strong> PHP (7+ yrs), Java (2+ yrs), Python</li>
+            <li><strong>Frameworks:</strong> Nova, Laravel, Django, Spring Boot, Odoo, Typecho, CodeIgniter, WordPress
+            </li>
+            <li><strong>Databases:</strong> MySQL, PostgreSQL, SQL Server, Redis</li>
+            <li><strong>Tools:</strong> FFmpeg, MyBatis, GitHub, GitLab, Metabase</li>
+            <li><strong>AI/ML & Analytics:</strong> (Learning) PyTorch, Transformers, Scikit-learn, Hugging Face</li>
+        </ul>
     </section>
 
     <section class="mb-8">
-      <h2 class="text-xl font-semibold mb-2">Projects</h2>
-      <ul class="list-disc list-inside space-y-1">
-        <li><strong>Loan & Installment Management System:</strong> Built with Nova and MySQL, used by financial institutions for managing customer loans.</li>
-        <li><strong>POS System:</strong> Retail-ready solution powered by Laravel with live sales and reporting features.</li>
-        <li><strong>Private Movie System:</strong> Built for a cafe-shop movie room, handling media playback.</li>
-        <li><strong>Enterprise Tools at MEF:</strong> Internal systems using Laravel, Django, Odoo, MySQL, and PostgreSQL.</li>
-        <li><strong>Admin & App APIs:</strong> RESTful APIs powering web dashboards and mobile apps.</li>
-        <li><strong>Analytics Dashboards:</strong> Real-time data visualization and tracking using Metabase.</li>
-      </ul>
+        <h2 class="text-xl font-semibold mb-2">Projects</h2>
+        <ul class="list-disc list-inside space-y-1">
+            <li><strong>Loan & Installment Management System:</strong> Built with Nova and MySQL, used by financial
+                institutions for managing customer loans.
+            </li>
+            <li><strong>POS System:</strong> Retail-ready solution powered by Laravel with live sales and reporting
+                features.
+            </li>
+            <li><strong>Private Movie System:</strong> Built for a cafe-shop movie room, handling media playback.</li>
+            <li><strong>Enterprise Tools at MEF:</strong> Internal systems using Laravel, Django, Odoo, MySQL, and
+                PostgreSQL.
+            </li>
+            <li><strong>Admin & App APIs:</strong> RESTful APIs powering web dashboards and mobile apps.</li>
+            <li><strong>Analytics Dashboards:</strong> Real-time data visualization and tracking using Metabase.</li>
+        </ul>
     </section>
 
     <section class="mb-8">
-      <h2 class="text-xl font-semibold mb-2">Work Experience</h2>
-      <ul class="space-y-3">
-        <li>
-          <strong>Programmer – Maya Technology (2023–Present):</strong> Focused on building scalable backend APIs using Spring Boot.
-        </li>
-        <li>
-          <strong>Programmer – Ministry of Economy and Finance (2018–2023):</strong> Developed and maintained full-stack enterprise systems.
-        </li>
-        <li>
-          <strong>Web Developer – One Technology Team (2016–2018):</strong> Delivered loan & Installment, POS, and attendance solutions using full-stack technologies.
-        </li>
-      </ul>
+        <h2 class="text-xl font-semibold mb-2">Work Experience</h2>
+        <ul class="space-y-3">
+            <li>
+                <strong>Programmer – Maya Technology (2023–Present):</strong> Focused on building scalable backend APIs
+                using Spring Boot.
+            </li>
+            <li>
+                <strong>Programmer – Ministry of Economy and Finance (2018–2023):</strong> Developed and maintained
+                full-stack enterprise systems.
+            </li>
+            <li>
+                <strong>Web Developer – One Technology Team (2016–2018):</strong> Delivered loan & Installment, POS, and
+                attendance solutions using full-stack technologies.
+            </li>
+        </ul>
     </section>
 
     <section class="mb-8">
-      <h2 class="text-xl font-semibold mb-2">Education</h2>
-      <ul class="list-disc list-inside">
-        <li>BSc in Information and Network Technology – Build Bright University, Battambang</li>
-      </ul>
+        <h2 class="text-xl font-semibold mb-2">Education</h2>
+        <ul class="list-disc list-inside">
+            <li>BSc in Information and Network Technology – Build Bright University, Battambang</li>
+        </ul>
     </section>
 
     <section class="mb-8">
-      <h2 class="text-xl font-semibold mb-2">Contact</h2>
-      <ul class="list-disc list-inside">
-        <li>Telegram: <a href="https://t.me/monyratha" class="text-blue-400 hover:underline">@monyratha</a></li>
-        <li>GitHub: <a href="https://github.com/monyratha" class="text-blue-400 hover:underline">github.com/monyratha</a></li>
-      </ul>
+        <h2 class="text-xl font-semibold mb-2">Contact</h2>
+        <ul class="list-disc list-inside">
+            <li>Telegram: <a href="https://t.me/monyratha" class="text-blue-400 hover:underline">@monyratha</a></li>
+            <li>GitHub: <a href="https://github.com/monyratha" class="text-blue-400 hover:underline">github.com/monyratha</a>
+            </li>
+        </ul>
     </section>
 
     <footer class="text-center text-sm text-gray-500 mt-10">© 2025 Mony Ratha</footer>
-  </div>
+</div>
 </body>
 </html>
