@@ -71,6 +71,7 @@
             height: 100%;
             pointer-events: none;
             z-index: -1;
+            opacity: 0.2;
         }
     </style>
 </head>
@@ -194,11 +195,13 @@
         }
 
         function updateColor() {
-            color = document.documentElement.classList.contains('dark') ? '#0F0' : '#4B5563';
+            color = document.documentElement.classList.contains('dark')
+                ? 'rgba(0, 255, 0, 0.6)'
+                : 'rgba(75, 85, 99, 0.6)';
         }
 
         function draw() {
-            ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
+            ctx.fillStyle = 'rgba(0, 0, 0, 0.1)';
             ctx.fillRect(0, 0, canvas.width, canvas.height);
             ctx.fillStyle = color;
             ctx.font = fontSize + 'px monospace';
