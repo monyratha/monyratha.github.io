@@ -18,6 +18,18 @@ This is a personal portfolio website built with **HTML** and **Tailwind CSS**, s
 - Font: Fira Code (monospace)
 - LocalStorage (for saving theme preferences)
 
+## Development
+
+No additional dependencies are required as Tailwind CSS is loaded from a CDN.
+
+You can serve the site locally with a simple HTTP server:
+
+```bash
+python3 -m http.server
+```
+
+Then open `http://localhost:8000/` in your browser.
+
 ## 🌐 Live Preview
 [https://monyratha.github.io/](https://monyratha.github.io/)
 
