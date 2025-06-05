@@ -37,6 +37,10 @@
             if (yearEl) {
                 yearEl.textContent = new Date().getFullYear();
             }
+
+            if (window.updateMatrixColor) {
+                window.updateMatrixColor();
+            }
         });
 
         function toggleTheme() {
@@ -48,6 +52,10 @@
             if (btn) {
                 btn.setAttribute('aria-pressed', html.classList.contains('dark'));
             }
+
+            if (window.updateMatrixColor) {
+                window.updateMatrixColor();
+            }
         }
     </script>
 
@@ -55,10 +63,20 @@
         body {
             transition: background 0.3s, color 0.3s;
         }
+        #matrix-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
     </style>
 </head>
 
 <body class="bg-white dark:bg-gray-900 text-black dark:text-white font-mono">
+<canvas id="matrix-canvas"></canvas>
 <div class="max-w-4xl mx-auto p-6">
     <header class="flex justify-between items-center mb-10">
         <h1 class="text-3xl font-bold">Mony Ratha</h1>
@@ -158,5 +176,51 @@
 
     <footer class="text-center text-sm text-gray-500 mt-10">© <span id="year"></span> Mony Ratha</footer>
 </div>
+<script>
+    (function() {
+        const canvas = document.getElementById('matrix-canvas');
+        if (!canvas) return;
+        const ctx = canvas.getContext('2d');
+        const fontSize = 14;
+        let columns = Math.floor(window.innerWidth / fontSize);
+        let drops = Array(columns).fill(0);
+        let color = '#0F0';
+
+        function resize() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+            columns = Math.floor(canvas.width / fontSize);
+            drops = Array(columns).fill(0);
+        }
+
+        function updateColor() {
+            color = document.documentElement.classList.contains('dark') ? '#0F0' : '#4B5563';
+        }
+
+        function draw() {
+            ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            ctx.fillStyle = color;
+            ctx.font = fontSize + 'px monospace';
+
+            for (let i = 0; i < drops.length; i++) {
+                const text = String.fromCharCode(0x30A0 + Math.random() * 96);
+                ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+
+                if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+                    drops[i] = 0;
+                }
+                drops[i]++;
+            }
+        }
+
+        window.addEventListener('resize', resize);
+        window.updateMatrixColor = updateColor;
+
+        resize();
+        updateColor();
+        setInterval(draw, 50);
+    })();
+</script>
 </body>
 </html>
