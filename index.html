@@ -27,6 +27,11 @@
             } else {
                 document.documentElement.classList.remove('dark');
             }
+
+            const yearEl = document.getElementById('year');
+            if (yearEl) {
+                yearEl.textContent = new Date().getFullYear();
+            }
         });
 
         function toggleTheme() {
@@ -128,7 +133,7 @@
         </ul>
     </section>
 
-    <footer class="text-center text-sm text-gray-500 mt-10">© 2025 Mony Ratha</footer>
+    <footer class="text-center text-sm text-gray-500 mt-10">© <span id="year"></span> Mony Ratha</footer>
 </div>
 </body>
 </html>
