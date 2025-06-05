@@ -28,6 +28,11 @@
                 document.documentElement.classList.remove('dark');
             }
 
+            const btn = document.querySelector('[aria-label="Toggle theme"]');
+            if (btn) {
+                btn.setAttribute('aria-pressed', document.documentElement.classList.contains('dark'));
+            }
+
             const yearEl = document.getElementById('year');
             if (yearEl) {
                 yearEl.textContent = new Date().getFullYear();
@@ -38,6 +43,11 @@
             const html = document.documentElement;
             html.classList.toggle('dark');
             localStorage.theme = html.classList.contains('dark') ? 'dark' : 'light';
+
+            const btn = document.querySelector('[aria-label="Toggle theme"]');
+            if (btn) {
+                btn.setAttribute('aria-pressed', html.classList.contains('dark'));
+            }
         }
     </script>
 
@@ -52,7 +62,7 @@
 <div class="max-w-4xl mx-auto p-6">
     <header class="flex justify-between items-center mb-10">
         <h1 class="text-3xl font-bold">Mony Ratha</h1>
-        <button onclick="toggleTheme()" class="text-sm border px-3 py-1 rounded hover:bg-gray-800">
+        <button onclick="toggleTheme()" aria-label="Toggle theme" class="text-sm border px-3 py-1 rounded hover:bg-gray-800">
             Toggle Theme
         </button>
     </header>
