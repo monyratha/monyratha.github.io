@@ -25,3 +25,7 @@ This is a personal portfolio website built with **HTML** and **Tailwind CSS**, s
 
 - **Telegram:** [@monyratha](https://t.me/monyratha)
 - **GitHub:** [github.com/monyratha](https://github.com/monyratha)
+
+## License
+
+This project is released under the [MIT License](LICENSE).
