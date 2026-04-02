@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta name="description" content="Mony Ratha's developer portfolio showcasing skills, projects, and experience"/>
-    <meta property="og:title" content="Mony Ratha - Portfolio"/>
-    <meta property="og:description" content="Mony Ratha's developer portfolio showcasing skills, projects, and experience"/>
-    <title>Mony Ratha - Portfolio</title>
+    <meta name="description" content="Mony Ratha is a Senior Java Backend Engineer with 9+ years of experience building scalable systems across media, finance, and enterprise platforms."/>
+    <meta property="og:title" content="Mony Ratha - Senior Java Backend Engineer"/>
+    <meta property="og:description" content="Senior Java Backend Engineer focused on high-performance APIs, data-intensive systems, and backend reliability."/>
+    <title>Mony Ratha - Senior Java Backend Engineer</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -60,10 +60,24 @@
 
 <body class="bg-white dark:bg-gray-900 text-black dark:text-white font-mono">
 <div class="max-w-4xl mx-auto p-6">
-    <header class="flex justify-between items-center mb-10">
-        <div class="flex items-center gap-3">
-            <img src="https://github.com/monyratha.png" alt="Mony Ratha profile picture" class="w-12 h-12 rounded-full">
-            <h1 class="text-3xl font-bold">Mony Ratha</h1>
+    <header class="flex flex-col gap-4 md:flex-row md:justify-between md:items-start mb-10">
+        <div class="space-y-3">
+            <div class="flex items-center gap-3">
+                <img src="assets/profile.JPG" alt="Mony Ratha profile picture" class="w-12 h-12 rounded-full object-cover">
+                <div>
+                    <h1 class="text-3xl font-bold">Mony Ratha</h1>
+                    <p class="text-sm text-gray-600 dark:text-gray-400">Senior Java Backend Engineer</p>
+                </div>
+            </div>
+            <p class="max-w-2xl text-sm leading-6 text-gray-700 dark:text-gray-300">
+                Backend engineer focused on Spring Boot services, high-performance APIs, and reliable data-intensive systems across streaming, finance, and enterprise products.
+            </p>
+            <div class="flex flex-wrap gap-2 text-xs">
+                <span class="rounded-full border border-gray-300 px-3 py-1 dark:border-gray-700">9+ years experience</span>
+                <span class="rounded-full border border-gray-300 px-3 py-1 dark:border-gray-700">Spring Boot</span>
+                <span class="rounded-full border border-gray-300 px-3 py-1 dark:border-gray-700">MySQL + Redis</span>
+                <span class="rounded-full border border-gray-300 px-3 py-1 dark:border-gray-700">Payment integrations</span>
+            </div>
         </div>
         <button onclick="toggleTheme()" aria-label="Toggle theme" class="text-sm border px-2 py-1 rounded hover:bg-gray-800">
             <!-- Sun icon -->
@@ -86,19 +100,19 @@
     </header>
 
     <section class="mb-8">
-        <h2 class="text-xl font-semibold mb-2">About Me</h2>
+        <h2 class="text-xl font-semibold mb-2">Profile</h2>
         <div class="space-y-4">
             <p>
-                I’m Mony Ratha, a developer with over 9 years of full-stack and backend experience. From 2016 to 2023, I built end-to-end systems using Laravel, Django, Odoo, and other frameworks.
+                Senior Java Backend Engineer with 9+ years of experience building and optimizing scalable systems across media, finance, and enterprise platforms.
             </p>
             <p>
-                Since 2023, I’ve focused on optimizing data-heavy workflows: building scalable APIs with Java Spring Boot, tuning MySQL and Redis, and integrating FFmpeg for media processing.
+                My core strengths are Java Spring Boot development, high-performance API design, and data-intensive backend systems, with strong hands-on work in MySQL and Redis for high-concurrency environments.
             </p>
             <p>
-                Lately, I’m exploring AI and machine learning with PyTorch and Transformers—eager to enhance backend services, automate tasks, and keep learning.
+                I’ve delivered backend services for video streaming, secure Apple IAP and Google Play payment flows, workflow automation platforms, and business systems used by both internal teams and external customers.
             </p>
             <p>
-                My goal is to level up my backend skills, contribute to open source, dive deeper into AI, and move toward a leadership role—all while maintaining a healthy work-life balance.
+                I care about system performance, production reliability, and clean architecture, and I’m continuing to grow toward stronger system design ownership and technical leadership.
             </p>
         </div>
     </section>
@@ -106,49 +120,57 @@
     <section class="mb-8">
         <h2 class="text-xl font-semibold mb-2">Skills</h2>
         <ul class="list-disc list-inside space-y-1">
-            <li><strong>Languages:</strong> Java (3+ yrs), PHP (7+ yrs), Python (3+ yrs), SQL</li>
-            <li><strong>Frameworks & Libraries:</strong> Spring Boot, MyBatis Plus, Odoo, Django, Laravel, CodeIgniter, Nova, Typecho, WordPress</li>
-            <li><strong>Databases & Caching:</strong> MySQL, PostgreSQL, Redis</li>
-            <li><strong>Tools & Platforms:</strong> Git, Docker, Metabase, FFmpeg</li>
-            <li><strong>AI/ML:</strong> PyTorch, Transformers, Scikit-learn, Hugging Face (learning)</li>
+            <li><strong>Languages:</strong> Java, PHP, Python, SQL</li>
+            <li><strong>Frameworks:</strong> Spring Boot, MyBatis Plus, Odoo, Django, Laravel, CodeIgniter, Nova, Typecho</li>
+            <li><strong>Databases:</strong> MySQL, PostgreSQL, Redis</li>
+            <li><strong>CI/CD &amp; Tools:</strong> Git, Docker, Metabase, FFmpeg, Jenkins</li>
+            <li><strong>Soft Skills:</strong> Communication, Teamwork, Responsibility, Problem-Solving, Project Management</li>
         </ul>
     </section>
 
     <section class="mb-8">
-        <h2 class="text-xl font-semibold mb-2">Projects</h2>
+        <h2 class="text-xl font-semibold mb-2">Selected Work</h2>
         <ul class="list-disc list-inside space-y-1">
-            <li><strong>Many Platform Admin &amp; App APIs:</strong> RESTful APIs supporting web dashboards and mobile platforms.</li>
-            <li><strong>Analytics Dashboards:</strong> Real-time insights using Metabase.</li>
-            <li><strong>Enterprise Tools at MEF:</strong> Laravel, Django, and Odoo apps for internal government workflows.</li>
-            <li><strong>Loan &amp; Installment Management &amp; Accounting System:</strong> Nova + MySQL platform for managing customer loans.</li>
-            <li><strong>POS System:</strong> Laravel-based retail solution with sales reporting.</li>
-            <li><strong>Private Movie System:</strong> Media management system for a café-style movie room.</li>
-            <li><strong>Attendance Systems:</strong> Web-based attendance recording and reporting.</li>
+            <li><strong>Video Streaming Backend:</strong> Built high-performance Spring Boot services supporting large-scale streaming features and app APIs.</li>
+            <li><strong>Payment Integrations:</strong> Implemented Apple IAP and Google Play payment validation flows with real-time notification handling.</li>
+            <li><strong>Government Workflow Platforms:</strong> Delivered Laravel, Django, and Odoo systems for workflow automation, document processing, and help desk operations.</li>
+            <li><strong>Business Operations Systems:</strong> Built POS, loan management, account management, attendance tracking, and media room systems with web and Android integration.</li>
+            <li><strong>Platform Reliability Improvements:</strong> Optimized MySQL and Redis performance, resolved production issues, and refactored legacy systems toward cleaner architecture.</li>
         </ul>
     </section>
 
     <section class="mb-8">
         <h2 class="text-xl font-semibold mb-2">Work Experience</h2>
         <ul class="space-y-3">
-            <li><strong>Backend Developer – Maya Technology (2023–Present):</strong> Building scalable backend and app APIs with Spring Boot; optimizing MySQL queries and Redis caching; developing channel system management for collecting and analyzing data across products.</li>
-            <li><strong>Programmer – Ministry of Economy and Finance (2018–2023):</strong> Developed full-stack Laravel, Django, and Odoo applications for internal government workflows; created analytics dashboards and automated reporting tools.</li>
-            <li><strong>Web Developer – One Technology Team (2016–2018):</strong> Designed and implemented loan, POS, private movie, and attendance systems using Laravel and Nova; integrated MySQL for data storage and reporting.</li>
+            <li><strong>Senior Java Backend Engineer – Maya Technology (Apr 2023–Present):</strong> Designed and implemented high-performance backend services using Spring Boot for large-scale video streaming features; optimized MySQL queries and Redis caching; integrated Apple IAP and Google Play payment systems; diagnosed production issues; and refactored legacy code toward clean architecture. <span class="text-sm text-gray-500 dark:text-gray-400">On-site, Sihanoukville, Cambodia</span></li>
+            <li><strong>Programmer – Ministry of Economy and Finance of Cambodia (Sept 2018–Apr 2023):</strong> Developed backend systems with Laravel and Django for internal government platforms, improved workflow automation and document processing, customized Odoo modules for help desk operations, optimized database performance, and maintained legacy systems in a high-dependency environment. <span class="text-sm text-gray-500 dark:text-gray-400">On-site, Phnom Penh, Cambodia</span></li>
+            <li><strong>Web Developer – One Technology Team (July 2016–Sept 2018):</strong> Delivered client-facing systems across retail, finance, HR, and media using Laravel and Nova, including POS, loan management, account management, attendance tracking, and a family movie system with web and Android integration. <span class="text-sm text-gray-500 dark:text-gray-400">On-site, Battambang, Cambodia</span></li>
         </ul>
     </section>
 
     <section class="mb-8">
         <h2 class="text-xl font-semibold mb-2">Education</h2>
+        <ul class="list-disc list-inside space-y-2">
+            <li><strong>Bachelor of Science in Information and Network Technology</strong><br><span class="text-sm text-gray-400">2012–2016, Build Bright University – Battambang, Cambodia</span></li>
+            <li><strong>Odoo Training</strong><br><span class="text-sm text-gray-400">2023, Online Training</span></li>
+        </ul>
+    </section>
+
+    <section class="mb-8">
+        <h2 class="text-xl font-semibold mb-2">Languages</h2>
         <ul class="list-disc list-inside">
-            <li><strong>Bachelor of Science in Information Technology</strong><br><span class="text-sm text-gray-400">2012–2016, Build Bright University – Battambang, Cambodia</span></li>
+            <li>Khmer (Native)</li>
+            <li>English (Working Proficiency)</li>
         </ul>
     </section>
 
     <section class="mb-8">
         <h2 class="text-xl font-semibold mb-2">Contact</h2>
-        <ul class="list-disc list-inside">
-            <li>Telegram: <a href="https://t.me/monyratha" class="text-blue-400 hover:underline">@monyratha</a></li>
-            <li>GitHub: <a href="https://github.com/monyratha" class="text-blue-400 hover:underline">github.com/monyratha</a>
-            </li>
+        <ul class="list-disc list-inside space-y-1">
+            <li>Email: <a href="mailto:monyratha8@gmail.com" class="text-blue-400 hover:underline">monyratha8@gmail.com</a></li>
+            <li>Phone: <a href="tel:+85570743643" class="text-blue-400 hover:underline">+855 70 743 643</a></li>
+            <li>LinkedIn: <a href="https://www.linkedin.com/in/monyratha/" class="text-blue-400 hover:underline">linkedin.com/in/monyratha</a></li>
+            <li>GitHub: <a href="https://github.com/monyratha" class="text-blue-400 hover:underline">github.com/monyratha</a></li>
         </ul>
     </section>
 
